@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Intra Space Design</title>
+
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+	var aImages = new Array();
+	var aURL = new Array();
+	var aArtists = new Array();
+	var iPrev = -1;
+	var iRnd = -1;
+
+	aImages[0] = "http://intraspacedesign.net/large_images/corporate/DSC_0015.jpg";
+	aImages[1] = "http://intraspacedesign.net/large_images/corporate/DSC_0018.jpg";
+	aImages[2] = "http://intraspacedesign.net/large_images/corporate/Steelcase_B.jpg";
+	aImages[3] = "http://intraspacedesign.net/large_images/corporate/Academic04.jpg";
+	aImages[4] = "http://intraspacedesign.net/large_images/residential/DSC_6173.jpg";
+	aImages[5] = "http://intraspacedesign.net/large_images/corporate/DSC_0007.jpg";
+	aImages[6] = "http://intraspacedesign.net/large_images/corporate/DSC_0009.jpg";
+	aImages[7] = "http://intraspacedesign.net/large_images/courtyardChuhuly.jpg";
+	aImages[8] = "http://intraspacedesign.net/large_images/retail/Details007.jpg";
+
+	aURL[0] = "http://www.Intraspacedesig.net"; 
+	aURL[1] = "http://www.Intraspacedesig.net";
+	aURL[2] = "http://www.Intraspacedesig.net";
+	aURL[3] = "http://www.Intraspacedesig.net";
+	aURL[4] = "http://www.Intraspacedesig.net";
+	aURL[5] = "http://www.Intraspacedesig.net";
+	aURL[6] = "http://www.Intraspacedesig.net";
+	aURL[7] = "http://www.Intraspacedesig.net";
+	aURL[8] = "http://www.Intraspacedesig.net";
+
+	aArtists[0] = "Yvonne Bodell";
+	aArtists[1] = "Yvonne Bodell";
+	aArtists[2] = "Yvonne Bodell";
+	aArtists[3] = "Yvonne Bodell";	
+	aArtists[4] = "Yvonne Bodell";
+	aArtists[5] = "Yvonne Bodell";
+	aArtists[6] = "Yvonne Bodell";
+	aArtists[7] = "Yvonne Bodell";
+	aArtists[8] = "Yvonne Bodell";
+
+	$(document).ready(function() {
+
+		/* Define the function that triggers to fade in the background as soon as the image has loaded */
+		$("img#bg").load(function()
+			{
+				/* Fade in during 1 seconds */
+				$("img#bg").fadeTo(1000,1);
+				/* Animate the picture description during 1 second */
+				setTimeout(function() { $("#image_description").animate({right: '+=150'}, 1000) }, 1000);
+				/* Set the timeout to fade out the image and the description after 10 seconds*/
+		    	setTimeout(function() 
+			    	{
+			    		$("#image_description").animate({right: '-=150'}, 1000);
+			    		$("img#bg").fadeOut(1000);
+			    		
+			    		/* Load the next image after 5 seconds */
+			    		setTimeout(LoadImages,5000);
+			    	}
+			    	,10000);
+			}
+		)
+		/* Start the slideshow one second after the page is ready */ 
+		setTimeout(LoadImages,1000);
+    });
+
+    function LoadImage(iNr)
+	{
+		/* Assign the new image to the background */
+		$("img#bg").attr("src", aImages[iNr]);
+ 		
+ 		/* Assign the artist name to the description */
+ 		$("#image_artist").html(aArtists[iNr]);
+ 		
+ 		/* Assign the image url to the description */
+        $("a#image_url").attr("href", aURL[iNr]);
+        $("a#image_url").html("Thanke for stopping by.");                 	
+    };
+    
+    function LoadImages()
+    {
+    	/* Select a random image number and make sure this is not equal to the previous image */
+    	while(iPrev == iRnd)
+    	{
+    		iRnd = Math.floor(Math.random()*aImages.length);
+    	}
+    	
+    	/* Show the selected image */
+    	LoadImage(iRnd);
+    	iPrev = iRnd;
+    };
+</script>
+
+<link href="global2012.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- This is the main page -->
+<div id="page_overlay"><!-- #BeginLibraryItem "/Library/IntraSpace Nav.lbi" -->
+<div id="sub_nav">
+  <p><a href="philosophy.html">Philosophy</a></p>
+  <p><a href="services2012.html">Design Services</a></p>
+  <p><a href="awards.html">Published Works / Awards</a></p>
+  <p><a href="bio.html">Bio</a></p>
+  <p><a href="contact.html">Contact</a></p>
+</div>
+<div id="logo"><a href="index.html"><img src="img/Intraspace-design-logo_001.png" alt="" width="150" height="67" /></a></div>
+<div id="main_nav"><a href="portfolio_corporate_01.html">Corporate</a><a href="portfolio_residential.html">Residential</a><a href="portfolio_academic1.html">Academic</a><a href="portfolio_retail_1.html">Retail</a><a href="portfolio_decor.html">Seasonal Decor</a></div>
+<!-- #EndLibraryItem --><div id="page_footer">
+    <div id="text_title" class="unify"> Spaces that thoughtfully inspire you to improve your work and life.    </div>
+    <div class="unify">
+      <p>Welcome to Intra Space Design.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+</div>
+
+<!-- The container for the background-image -->
+<img id="bg" style="display:none" bottom: "0";/>
+
+<!-- The container for the grid on top of the background-image -->
+<div id="bg_grid"></div>
+
+</body>
+</html>
