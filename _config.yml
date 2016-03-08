@@ -17,5 +17,8 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Specify Jekyll version for CloudCannon consumption.
+version: 3.0.3
+
 # Build settings
 markdown: kramdown
