@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Intra Space Design</title>
+
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+	var aImages = new Array();
+	var aURL = new Array();
+	var aArtists = new Array();
+	var iPrev = -1;
+	var iRnd = -1;
+
+	aImages[0] = "http://intraspacedesign.net/large_images/sketch/FSCOLOR2825.jpg";
+	aImages[1] = "http://intraspacedesign.net/large_images/sketch/FSCOLOR2823.jpg";
+	aImages[2] = "http://intraspacedesign.net/large_images/sketch/FSCOLOR2824-1.jpg";
+	aImages[3] = "http://intraspacedesign.net/large_images/sketch/FSCOLOR2826-2.jpg";
+	aImages[4] = "http://intraspacedesign.net/large_images/sketch/FSCOLOR2826-1.jpg";
+	aImages[5] = "http://intraspacedesign.net/large_images/sketch/FSCOLOR2826-4.jpg";
+	aImages[6] = "http://intraspacedesign.net/large_images/sketch/Steelcase_A.jpg";
+	aImages[7] = "http://intraspacedesign.net/large_images/sketch/Steelcase-Sketch001.jpg";
+	aImages[8] = "http://intraspacedesign.net/large_images/sketch/Steelcase-Sketch002.jpg";
+
+	aURL[0] = "http://www.Intraspacedesig.net"; 
+	aURL[1] = "http://www.Intraspacedesig.net";
+	aURL[2] = "http://www.Intraspacedesig.net";
+	aURL[3] = "http://www.Intraspacedesig.net";
+	aURL[4] = "http://www.Intraspacedesig.net";
+	aURL[5] = "http://www.Intraspacedesig.net";
+	aURL[6] = "http://www.Intraspacedesig.net";
+	aURL[7] = "http://www.Intraspacedesig.net";
+	aURL[8] = "http://www.Intraspacedesig.net";
+
+	aArtists[0] = "Yvonne Bodell";
+	aArtists[1] = "Yvonne Bodell";
+	aArtists[2] = "Yvonne Bodell";
+	aArtists[3] = "Yvonne Bodell";	
+	aArtists[4] = "Yvonne Bodell";
+	aArtists[5] = "Yvonne Bodell";
+	aArtists[6] = "Yvonne Bodell";
+	aArtists[7] = "Yvonne Bodell";
+	aArtists[8] = "Yvonne Bodell";
+
+	$(document).ready(function() {
+
+		/* Define the function that triggers to fade in the background as soon as the image has loaded */
+		$("img#bg").load(function()
+			{
+				/* Fade in during 1 seconds */
+				$("img#bg").fadeTo(1000,1);
+				/* Animate the picture description during 1 second */
+				setTimeout(function() { $("#image_description").animate({right: '+=150'}, 1000) }, 1000);
+				/* Set the timeout to fade out the image and the description after 10 seconds*/
+		    	setTimeout(function() 
+			    	{
+			    		$("#image_description").animate({right: '-=150'}, 1000);
+			    		$("img#bg").fadeOut(1000);
+			    		
+			    		/* Load the next image after 5 seconds */
+			    		setTimeout(LoadImages,5000);
+			    	}
+			    	,10000);
+			}
+		)
+		/* Start the slideshow one second after the page is ready */ 
+		setTimeout(LoadImages,1000);
+    });
+
+    function LoadImage(iNr)
+	{
+		/* Assign the new image to the background */
+		$("img#bg").attr("src", aImages[iNr]);
+ 		
+ 		/* Assign the artist name to the description */
+ 		$("#image_artist").html(aArtists[iNr]);
+ 		
+ 		/* Assign the image url to the description */
+        $("a#image_url").attr("href", aURL[iNr]);
+        $("a#image_url").html("Thanke for stopping by.");                 	
+    };
+    
+    function LoadImages()
+    {
+    	/* Select a random image number and make sure this is not equal to the previous image */
+    	while(iPrev == iRnd)
+    	{
+    		iRnd = Math.floor(Math.random()*aImages.length);
+    	}
+    	
+    	/* Show the selected image */
+    	LoadImage(iRnd);
+    	iPrev = iRnd;
+    };
+</script>
+
+<link href="global2012.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- This is the main page -->
+<div id="page_overlay"><!-- #BeginLibraryItem "/Library/IntraSpace Nav.lbi" -->
+<div id="sub_nav">
+  <p><a href="philosophy.html">Philosophy</a></p>
+  <p><a href="services2012.html">Design Services</a></p>
+  <p><a href="awards.html">Published Works / Awards</a></p>
+  <p><a href="bio.html">Bio</a></p>
+  <p><a href="contact.html">Contact</a></p>
+</div>
+<div id="logo"><a href="index.html"><img src="img/Intraspace-design-logo_001.png" alt="" width="150" height="67" /></a></div>
+<div id="main_nav"><a href="portfolio_corporate_01.html">Corporate</a><a href="portfolio_residential.html">Residential</a><a href="portfolio_academic1.html">Academic</a><a href="portfolio_retail_1.html">Retail</a><a href="portfolio_decor.html">Seasonal Decor</a></div>
+<!-- #EndLibraryItem --><div id="page_footer">
+
+    <div id="text_title" class="unify">Design Services</div>
+    <div class="unify">
+      <p>It should be noted that not all clients need the maximum scope of work. We are interested in all sizes of projects even when the objective is simple in scale.</p>
+      <p>&nbsp;</p>
+      <p><strong>Strategic Planning &amp; Programming</strong></p>
+      <p>Planning sessions are held with the client to determine goals and objectives for the project. Interviews with employees or family members are arranged to determine specific needs. Sometimes Focus Groups help determine needs of departments or shared resources. It is important to understand the business issues the client wants addressed. There are options that can be made with the space to encourage change within a company or home environment. Intra Space Design also does observations of people at work to understand deeper needs within company culture. They are able to detect patterns and habits within the work place from observational studies. Designers take videos or digital photography to help with documentation and synthesis of ideas and information.  From this, research data is examined to begin to plan for the space involved. Intra Space Design also keeps in mind the needs of impaired individuals and is sensitive to how their environment should be addressed.</p>
+      <p>&nbsp;</p>
+      <p>Once the information is gathered and presented to the client there will be feedback, discussion and approval to move to the next phase of design.</p>
+      <p>&nbsp;</p>
+      <p><strong>Conceptual or Schematic Planning</strong></p>
+      <p>Is formulated from the information gathered by designers who create 2 &ndash; 3 schematic options that begin to solve for the goals and objectives the client desires. These options should not only be functional but of course creative, inspirational and design sensitive. They will also examine the use of products and materials that are Leed certified (eco-friendly). A general color scheme will be determined. Rough sketches, Bubble Diagrams, general space plans or workstations may be presented. Again the approval process will need to take place to move on to the Design Development phase.</p>
+      <p>&nbsp;</p>
+      <p><strong>Design Development</strong></p>
+      <p>Once the schematic design is approved hardline drawings on the computer will detail space plans for the entire project. Interior finishes will be determined; furniture plans and specifications will take place with final material selections. Lighting layouts, move management plans for phased installation (if need be) and Installation plans will be created to determine where all furniture and equipment needs to be placed. Any drawings that need to be distributed to subcontractors will be sent out for their use and budget purposes. There will be check points along the way to make certain the client understands what is happening during the project process and issues are resolved prior to ordering the products.</p>
+      <p>&nbsp;</p>
+      <p><strong>Implementation of the Project</strong></p>
+      <p>The Project Manager must meet with cross functional groups or parties throughout the project. Meetings with the client representative, IT, phone, Architect, Engineers (if need be), and Installers to coordinate the project and make sure everything happens as seamlessly as possible on time and within budget. The frequency of the meetings will be determined by the project parameters.</p>
+      <p>&nbsp;</p>
+      <p><strong>Other Services offered:</strong></p>
+      <p>&nbsp;</p>
+      <p><strong>Real Estate Home Staging</strong></p>
+      <p>Home Renovation, preparation for home resale interior and exterior needs.</p>
+      <p>&nbsp;</p>
+      <p><strong>Tradeshow, Set Design &amp; Events</strong></p>
+      <p>Layout for specific shows or company events, coordination with Exhibit House or Art Directors to create unique displays, and accessorization for shows or Set Design.</p>
+      <p>&nbsp;</p>
+      <p><strong>Specialty Decorations</strong></p>
+      <p>Intra Space Design does special decorations for events, or Holiday Seasonal d&eacute;cor for businesses and home interior and exterior environments.</p>
+      <p><br />
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- The container for the background-image -->
+<!-- img id="bg" style="display:none" bottom: "0";/ -->
+
+<img id="bg" style="display:none" bottom: "0";/>
+<!-- The container for the grid on top of the background-image -->
+<div id="bg_grid"></div>
+
+</body>
+</html>
