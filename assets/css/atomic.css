@@ -1,2 +1,50 @@
+.home slick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+  .home slick div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover; }
+
+.site-header {
+  position: relative;
+  z-index: 9999;
+  color: #fff; }
+  .site-header a {
+    color: #fff; }
+  .site-header .brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    text-align: center;
+    background-color: rgba(230, 126, 34, 0.75); }
+  .site-header ul {
+    list-style-type: none;
+    margin: 0; }
+  .site-header .top-nav {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    background-color: rgba(41, 128, 185, 0.75); }
+    .site-header .top-nav ul {
+      padding: 15px; }
+    .site-header .top-nav li {
+      display: inline-block; }
+  .site-header .right-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(192, 57, 43, 0.75); }
+    .site-header .right-nav ul {
+      padding: 15px; }
+    .site-header .right-nav li {
+      line-height: 1.5; }
 
 /*# sourceMappingURL=atomic.css.map */
