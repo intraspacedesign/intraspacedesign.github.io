@@ -1,11 +1,9 @@
 ---
 layout: default
 title: Contact
-
 carousel_config:
   autoplay_speed: 5000
   speed: 5000
-
 images:
   - image_url_path: /_images/sketch_01.jpg
     image_name: Intra Space Design Sketch
@@ -25,32 +23,11 @@ images:
     image_name: Intra Space Design Sketch
 ---
 <section class="page--home">
-  <slick class="ng-cloak"
-    data-autoplay="true"
-    data-autoplay-speed="{{ page.carousel_config.autoplay_speed }}"
-    data-arrows="false"
-    data-css-ease="linear"
-    data-fade="true"
-    data-infinite="true"
-    data-pause-on-hover="false"
-    data-speed="{{ page.carousel_config.speed }}">
+  <slick class="ng-cloak" data-autoplay="true" data-autoplay-speed="{{ page.carousel_config.autoplay_speed }}" data-arrows="false" data-css-ease="linear" data-fade="true" data-infinite="true" data-pause-on-hover="false" data-speed="{{ page.carousel_config.speed }}">
     {% for image in page.images %}
       <div class="slick-asset" style="background-image:url({{ image.image_url_path | prepend: site.baseurl }})"></div>
     {% endfor %}
   </slick>
 
-  <div class="content-block editable">
-    <p>Contact
-        Address
-        Yvonne Bodell MM,NCIDQ
-        4666 North Division
-        Comstock Park, Mi 49321
-
-        Telephone
-        616.550.4245
-
-        Email
-        ybodell@IntraspaceDesign.net
-    </p>
-  </div>
+  <div class="content-block editable"><h2>Contact</h2><p><strong>Address</strong><br />Yvonne Bodell MM,NCIDQ<br />4666 North Division<br />Comstock Park, Mi 49321</p><p><strong>Telephone</strong><br />616.550.4245</p><p><strong>Email</strong><br />ybodell@IntraspaceDesign.net</p></div>
 </section>
