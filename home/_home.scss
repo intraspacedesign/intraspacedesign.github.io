@@ -46,7 +46,7 @@
   .slick-dots-title {
     @include position(absolute, null 0 0 null);
     z-index: 6000;
-    width: (600 - 7.5) * 1px;
+    width: 600px;
     height: 75px;
     color: #fff;
   }
