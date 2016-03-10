@@ -3,6 +3,12 @@
 //
 
 .page--home {
+  .background-cover {
+    @include position(absolute, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 
   // we need to expand all of slick
   slick,
@@ -13,21 +19,18 @@
   }
 
   .slick-asset {
-      background-size: cover;
+    background-size: cover;
   }
 
   .content-block {
     @include position(absolute, null 0 0 null);
     padding: 30px;
     max-height: 60%;
+    width: 600px;
     max-width: 600px;
     color: #fff;
-    background-color: rgba(#3498db, .75);
+    background-color: rgba(#0fc3d3, .85);
     overflow-x: hidden;
     overflow-y: scroll;
-  }
-
-  .content-canvas {
-    display: block;
   }
 }

@@ -5,24 +5,24 @@
     </a>
   </div>
 
-  <nav class="nav-block">
-    <ul class="nav-block--top">
+  <nav class="nav-block--top">
+    <ul class="nav-list">
       {% for page in site.data.nav.top_nav.pages %}
         {% assign slug = page | downcase | replace: ' ', '-' | replace:'-&-','-and-' | replace:'-/-','-and-'  %}
         {% capture slug %}/portfolio/{{ slug }}{% endcapture %}
-        <li>
+        <li class="nav-item">
           <a href="{{ slug }}">{{ page }}</a>
         </li>
       {% endfor %}
     </ul>
   </nav>
 
-  <nav class="nav-block">
-    <ul class="nav-block--right">
+  <nav class="nav-block--right">
+    <ul class="nav-list">
       {% for page in site.data.nav.right_nav.pages %}
         {% assign slug = page | downcase | replace: ' ', '-' | replace:'-&-','-and-' | replace:'-/-','-and-'  %}
         {% capture slug %}/{{ slug }}{% endcapture %}
-        <li>
+        <li class="nav-item">
           <a href="{{ slug }}">{{ page }}</a>
         </li>
       {% endfor %}

@@ -3,30 +3,61 @@
   display: table;
   width: 100%;
   z-index: 9999; }
-  .site-header .brand {
-    display: block;
-    height: 100%;
-    background-color: rgba(230, 126, 34, 0.75); }
-  .site-header .display {
-    margin: 0;
-    padding: 1em; }
+  .site-header a {
+    color: #fff;
+    text-decoration: none; }
   .site-header .nav-block {
-    display: table-cell;
-    vertical-align: top; }
-    .site-header .nav-block ul {
-      list-style-type: none; }
-    .site-header .nav-block--top {
-      display: table-cell;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px; }
+    .site-header .nav-block .brand {
+      display: block;
+      height: 100%;
+      background-color: rgba(204, 149, 69, 0.85); }
+    .site-header .nav-block .display {
       margin: 0;
-      padding: 0;
-      background-color: rgba(41, 128, 185, 0.75); }
-      .site-header .nav-block--top li {
-        display: inline-block; }
-    .site-header .nav-block--right {
+      padding: 1em;
+      text-align: center;
+      font-weight: lighter; }
+  .site-header .nav-block--top {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    background-color: rgba(51, 134, 194, 0.85); }
+    .site-header .nav-block--top .nav-list {
+      padding-left: 30px;
+      padding-right: 30px; }
+    .site-header .nav-block--top .nav-item {
+      margin-left: 15px;
+      margin-right: 15px;
+      display: inline-block; }
+  .site-header .nav-block--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: table;
+    width: 250px;
+    padding: 15px;
+    text-align: right;
+    background-color: rgba(242, 96, 62, 0.85); }
+    .site-header .nav-block--right .nav-list {
       display: table-cell;
-      width: 50%;
-      text-align: right;
-      background-color: rgba(192, 57, 43, 0.75); }
+      vertical-align: middle; }
+    .site-header .nav-block--right .nav-item {
+      line-height: 1.5; }
+  .site-header .nav-list {
+    list-style-type: none; }
+
+.page--home .background-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
 
 .page--home slick,
 .page--home .slick-list,
@@ -47,13 +78,11 @@
   bottom: 0;
   padding: 30px;
   max-height: 60%;
+  width: 600px;
   max-width: 600px;
   color: #fff;
-  background-color: rgba(52, 152, 219, 0.75);
+  background-color: rgba(15, 195, 211, 0.85);
   overflow-x: hidden;
   overflow-y: scroll; }
-
-.page--home .content-canvas {
-  display: block; }
 
 /*# sourceMappingURL=atomic.css.map */

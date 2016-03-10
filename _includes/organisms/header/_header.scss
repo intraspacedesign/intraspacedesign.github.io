@@ -1,45 +1,72 @@
+
 .site-header {
   position: relative;
   display: table;
   width: 100%;
   z-index: 9999;
 
-  .brand {
-    display: block;
-    height: 100%;
-    background-color: rgba(#e67e22, .75);
-  }
-
-  .display {
-    margin: 0;
-    padding: 1em;
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 
   .nav-block {
-    display: table-cell;
-    vertical-align: top;
+    @include position(absolute, 0 null null 0);
+    width: 250px;
 
-    ul {
-      list-style-type: none;
+    .brand {
+      display: block;
+      height: 100%;
+      background-color: rgba(#cc9545, .85);
     }
 
-    &--top {
-      display: table-cell;
+    .display {
       margin: 0;
-      padding: 0;
+      padding: 1em;
+      text-align: center;
+      font-weight: lighter;
+    }
+  }
 
-      background-color: rgba(#2980b9, .75);
+  .nav-block--top {
+    @include position(absolute, 0 null null 250px);
+    background-color: rgba(#3386c2, .85);
 
-      li {
-        display: inline-block;
-      }
+    .nav-list {
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
-    &--right {
+    .nav-item {
+      margin-left: 15px;
+      margin-right: 15px;
+      display: inline-block;
+    }
+  }
+
+  .nav-block--right {
+    @include position(absolute, 0 0 null null);
+    display: table;
+
+    width: 250px;
+
+    padding: 15px;
+
+    text-align: right;
+    background-color: rgba(#f2603e, .85);
+
+    .nav-list {
       display: table-cell;
-      width: 50%;
-      text-align: right;
-      background-color: rgba(#c0392b, .75);
+      vertical-align: middle;
     }
+
+    .nav-item {
+      line-height: 1.5;
+    }
+  }
+
+
+  .nav-list {
+    list-style-type: none;
   }
 }
