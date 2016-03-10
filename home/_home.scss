@@ -18,6 +18,39 @@
     @include position(absolute, 0);
   }
 
+  .slick-dots {
+    @include position(absolute, null 0 0 null);
+    z-index: 6000;
+    width: 600px;
+    padding: 10px 10px 75px 10px;
+    margin: 0;
+    list-style-type: none;
+    background-color: rgba(#0fc3d3, .85);
+
+    li {
+      display: block;
+      float: left;
+      margin: 5px;
+    }
+
+    button {
+      width: 36px;
+      height: 36px;
+      color: #fff;
+      border: 0;
+      border-radius: 3px;
+      background-color: rgba(#3386c2, .85);
+    }
+  }
+
+  .slick-dots-title {
+    @include position(absolute, null 0 0 null);
+    z-index: 6000;
+    width: (600 - 7.5) * 1px;
+    height: 75px;
+    color: #fff;
+  }
+
   .slick-asset {
     background-size: cover;
   }

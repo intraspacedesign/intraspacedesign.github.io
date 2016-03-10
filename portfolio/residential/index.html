@@ -1,0 +1,61 @@
+---
+layout: default
+title: Residential
+carousel_config:
+  speed: 1000
+images:
+  - image_url_path: /portfolio/residential/Residential_01.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_02.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_03.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_04.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_05.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_06.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_07.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_08.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_09.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_010.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_011.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_012.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_013.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_014.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_015.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_016.jpg
+    image_name: Intra Space Design Residential
+  - image_url_path: /portfolio/residential/Residential_017.jpg
+    image_name: Intra Space Design Residential
+---
+<section class="page--home">
+  <slick class="ng-cloak"
+    data-arrows="false"
+    data-css-ease="linear"
+    data-fade="true"
+    data-speed="{{ page.carousel_config.speed }}"
+    data-dots="true">
+    {% for image in page.images %}
+      <div class="slick-asset" style="background-image:url({{ image.image_url_path | prepend: site.baseurl }})"></div>
+    {% endfor %}
+  </slick>
+
+  <div class="slick-dots-title editable"><h2>Residential</h2></div>
+</section>
+
+<div hidden role="seo">
+  {% for image in page.images %}
+    <img hidden src="{{ image.image_url_path | prepend: site.baseurl }}" alt="{{ image.image_name }}" />
+  {% endfor %}
+</div>

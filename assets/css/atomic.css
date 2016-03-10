@@ -69,6 +69,37 @@
   bottom: 0;
   left: 0; }
 
+.page--home .slick-dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 6000;
+  width: 600px;
+  padding: 10px 10px 75px 10px;
+  margin: 0;
+  list-style-type: none;
+  background-color: rgba(15, 195, 211, 0.85); }
+  .page--home .slick-dots li {
+    display: block;
+    float: left;
+    margin: 5px; }
+  .page--home .slick-dots button {
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    background-color: rgba(51, 134, 194, 0.85); }
+
+.page--home .slick-dots-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 6000;
+  width: 592.5px;
+  height: 75px;
+  color: #fff; }
+
 .page--home .slick-asset {
   background-size: cover; }
 
