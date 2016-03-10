@@ -1,19 +1,31 @@
 ---
-layout: default
-title: About
-permalink: /about/
 ---
-<section class="page--about">
-    <p>Environment: {{ jekyll.environment }}</p>
+<!DOCTYPE html>
+<html lang="en">
 
-    <p>Asset URL: {{ site[jekyll.environment].asset_url }}</p>
-    <p>App URL: {{ site[jekyll.environment].app_url }}</p>
+<head>
+  {% include _sections/head.html %}
+</head>
 
-    <p>Development Asset URL: {{ site.development.asset_url }}</p>
-    <p>Production Asset URL: {{ site.production.asset_url }}</p>
-    <p>Staging Asset URL: {{ site.staging.asset_url }}</p>
+<body>
+  {% include _sections/top.html %}
+  <main class="page">
+    <section class="page--about">
+      <p>Environment: {{ jekyll.environment }}</p>
 
-    <p>Development App URL: {{ site.development.app_url }}</p>
-    <p>Staging App URL: {{ site.staging.app_url }}</p>
-    <p>Production App URL: {{ site.production.app_url }}</p>
-</section>
+      <p>Asset URL: {{ site[jekyll.environment].asset_url }}</p>
+      <p>App URL: {{ site[jekyll.environment].app_url }}</p>
+
+      <p>Development Asset URL: {{ site.development.asset_url }}</p>
+      <p>Production Asset URL: {{ site.production.asset_url }}</p>
+      <p>Staging Asset URL: {{ site.staging.asset_url }}</p>
+
+      <p>Development App URL: {{ site.development.app_url }}</p>
+      <p>Staging App URL: {{ site.staging.app_url }}</p>
+      <p>Production App URL: {{ site.production.app_url }}</p>
+    </section>
+  </main>
+  {% include _sections/bottom.html %}
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+---
+layout: default
+title: Awards
+
+carousel_config:
+  autoplay_speed: 5000
+  speed: 5000
+
+publishings:
+  - 'Haworth Houston Showroom, Interior Design, June 1982'
+  - 'NeoCon Chicago Showroom, Contract, 1982'
+  - 'Toronto Showroom, Contract, 1983'
+  - 'World Workplace, Salt Lake City, Exibitz Magazine, 1998'
+
+awards:
+  - 'IDEX Tradeshow booth award, 1995'
+  - 'World Workplace, Salt Lake City, "Most innovative use of materials," 1998'
+  - 'Steelcase Inc. University, Gov. Engler christened location as benchmark in cutting edge educational facilities, 2000'
+  - 'Brayton International, Dupont Merit Award for small office category, 2004'
+
+images:
+  - image_url_path: /_images/sketch_01.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_02.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_03.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_04.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_05.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_06.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_07.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /_images/sketch_08.jpg
+    image_name: Intra Space Design Sketch
+---
+<section class="page--home">
+  <slick class="ng-cloak"
+    data-autoplay="true"
+    data-autoplay-speed="{{ page.carousel_config.autoplay_speed }}"
+    data-arrows="false"
+    data-css-ease="linear"
+    data-fade="true"
+    data-infinite="true"
+    data-pause-on-hover="false"
+    data-speed="{{ page.carousel_config.speed }}">
+    {% for image in page.images %}
+      <div class="slick-asset" style="background-image:url({{ image.image_url_path | prepend: site.baseurl }})"></div>
+    {% endfor %}
+  </slick>
+
+  <div class="content-block editable">
+    <h2>Awards</h2>
+
+    <h3 class="editable">Published:</h3>
+    <ul>
+      {% for publishings in page.publishings %}
+      <li>{{ publishings }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3 class="editable">Awards:</h3>
+    <ul>
+      {% for award in page.awards %}
+      <li>{{ award }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<div hidden role="seo">
+  {% for image in page.images %}
+    <img hidden src="{{ image.image_url_path | prepend: site.baseurl }}" alt="{{ image.image_name }}">
+  {% endfor %}
+</div>

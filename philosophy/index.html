@@ -1,0 +1,56 @@
+---
+layout: default
+title: Philosophy
+
+carousel_config:
+  autoplay_speed: 5000
+  speed: 5000
+
+images:
+  - image_url_path: /assets/img/sketch_01.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_02.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_03.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_04.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_05.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_06.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_07.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_08.jpg
+    image_name: Intra Space Design Sketch
+---
+<section class="page--home">
+  <slick class="ng-cloak"
+    data-autoplay="true"
+    data-autoplay-speed="{{ page.carousel_config.autoplay_speed }}"
+    data-arrows="false"
+    data-css-ease="linear"
+    data-fade="true"
+    data-infinite="true"
+    data-pause-on-hover="false"
+    data-speed="{{ page.carousel_config.speed }}">
+    {% for image in page.images %}
+      <div class="slick-asset" style="background-image:url({{ image.image_url_path | prepend: site.baseurl }})"></div>
+    {% endfor %}
+  </slick>
+
+  <div class="content-block editable">
+    <p>Philosophy
+Intra Space Design means within the space. As someone who has wanted to design since a small child my passion has never subsided to create inspiring, innovative environments that improve the world in which we work and live. I do my utmost to thoughtfully listen to my clients needs and try to resolve issues or problems that they desire to change. To me a designer is someone who solves problems a space Dr. of sorts. Sometimes a designer helps put the pieces of the puzzle together. When need be, I call on other specialists to assist in creating the best possible project for the client.
+
+My mission is to deliver the client's goals and objectives by creating efficient, ergonomically correct spaces, utilizing sustainable products, building a functional environment that is of course beautiful and works. Intra Space Design is dedicated to giving back to the community and is involved with pro bono work and volunteering for organizations at home and abroad.
+
+I am the Principal Designer at Intra Space Design, llc. which began in southern California in the early 1990’s and has continued in west Michigan for the last 12 years.</p>
+  </div>
+</section>
+
+<div hidden role="seo">
+  {% for image in page.images %}
+    <img hidden src="{{ image.image_url_path | prepend: site.baseurl }}" alt="{{ image.image_name }}">
+  {% endfor %}
+</div>
