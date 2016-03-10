@@ -26,3 +26,16 @@ version: 3.0.3
 
 # Build settings
 markdown: kramdown
+
+# Environment configurations.
+development:
+  asset_url: "http://localhost:1337/"
+  app_url: "http://localhost:3000/"
+
+staging:
+  asset_url: "https://staging.example.org/assets/"
+  app_url: "https://staging.example.org/"
+
+production:
+  asset_url: "https://cdn.example.org/"
+  app_url: "https://app.example.org/"

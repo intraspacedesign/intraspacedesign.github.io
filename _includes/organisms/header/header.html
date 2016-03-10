@@ -9,7 +9,7 @@
     <ul class="nav-block--top">
       {% for page in site.data.nav.top_nav.pages %}
         {% assign slug = page | downcase | replace: ' ', '-' | replace:'-&-','-and-' | replace:'-/-','-and-'  %}
-        {% capture slug %}/{{ slug }}{% endcapture %}
+        {% capture slug %}/portfolio/{{ slug }}{% endcapture %}
         <li>
           <a href="{{ slug }}">{{ page }}</a>
         </li>
