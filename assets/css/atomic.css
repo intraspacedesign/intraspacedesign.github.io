@@ -1,59 +1,53 @@
-.home slick {
+.site-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 9999; }
+  .site-header .brand {
+    display: block;
+    height: 100%;
+    background-color: rgba(230, 126, 34, 0.75); }
+  .site-header .display {
+    margin: 0;
+    padding: 1em; }
+  .site-header .nav-block {
+    display: table-cell;
+    vertical-align: top; }
+    .site-header .nav-block ul {
+      list-style-type: none; }
+    .site-header .nav-block--top {
+      display: table-cell;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(41, 128, 185, 0.75); }
+      .site-header .nav-block--top li {
+        display: inline-block; }
+    .site-header .nav-block--right {
+      display: table-cell;
+      width: 50%;
+      text-align: right;
+      background-color: rgba(192, 57, 43, 0.75); }
+
+.page--home slick,
+.page--home .slick-list,
+.page--home .slick-track,
+.page--home .slick-asset {
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-  .home slick div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-size: cover; }
-
-.home .content-block {
-  position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0; }
+
+.page--home .slick-asset {
+  background-size: cover; }
+
+.page--home .content-block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   padding: 30px;
   max-width: 400px;
   color: #fff;
   background-color: rgba(52, 152, 219, 0.75); }
-
-.site-header {
-  position: relative;
-  z-index: 9999;
-  color: #fff; }
-  .site-header a {
-    color: #fff; }
-  .site-header .brand {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    text-align: center;
-    background-color: rgba(230, 126, 34, 0.75); }
-  .site-header ul {
-    list-style-type: none;
-    margin: 0; }
-  .site-header .top-nav {
-    position: absolute;
-    top: 0;
-    left: 250px;
-    background-color: rgba(41, 128, 185, 0.75); }
-    .site-header .top-nav ul {
-      padding: 15px; }
-    .site-header .top-nav li {
-      display: inline-block; }
-  .site-header .right-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(192, 57, 43, 0.75); }
-    .site-header .right-nav ul {
-      padding: 15px; }
-    .site-header .right-nav li {
-      line-height: 1.5; }
 
 /*# sourceMappingURL=atomic.css.map */

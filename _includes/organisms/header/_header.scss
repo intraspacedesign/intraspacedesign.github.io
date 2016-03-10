@@ -1,0 +1,45 @@
+.site-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+
+  .brand {
+    display: block;
+    height: 100%;
+    background-color: rgba(#e67e22, .75);
+  }
+
+  .display {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .nav-block {
+    display: table-cell;
+    vertical-align: top;
+
+    ul {
+      list-style-type: none;
+    }
+
+    &--top {
+      display: table-cell;
+      margin: 0;
+      padding: 0;
+
+      background-color: rgba(#2980b9, .75);
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    &--right {
+      display: table-cell;
+      width: 50%;
+      text-align: right;
+      background-color: rgba(#c0392b, .75);
+    }
+  }
+}

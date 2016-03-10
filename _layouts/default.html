@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.language }}">
 
 <head>
   {% include _sections/head.html %}
@@ -7,15 +7,13 @@
 
 <body>
   {% include _sections/top.html %}
-  {% include header.html %}
+  {% include organisms/header/header.html %}
 
-  <div class="page-content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </div>
+  <main class="page">
+    {{ content }}
+  </main>
 
-  {% include footer.html %}
+  {% include organisms/footer/footer.html %}
   {% include _sections/bottom.html %}
 </body>
 

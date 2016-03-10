@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="nav-block">
+    <a class="brand" href="/">
+      <h1 class="display">{{ site.title }}</h1>
+    </a>
+  </div>
+
+  <nav class="nav-block">
+    <ul class="nav-block--top">
+      {% for page in site.data.nav.top_nav.pages %}
+        {% assign slug = page | downcase | replace: ' ', '-' | replace:'-&-','-and-' | replace:'-/-','-and-'  %}
+        {% capture slug %}/{{ slug }}{% endcapture %}
+        <li>
+          <a href="{{ slug }}">{{ page }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <nav class="nav-block">
+    <ul class="nav-block--right">
+      {% for page in site.data.nav.right_nav.pages %}
+        {% assign slug = page | downcase | replace: ' ', '-' | replace:'-&-','-and-' | replace:'-/-','-and-'  %}
+        {% capture slug %}/{{ slug }}{% endcapture %}
+        <li>
+          <a href="{{ slug }}">{{ page }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

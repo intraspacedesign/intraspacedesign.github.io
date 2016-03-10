@@ -1,0 +1,25 @@
+//
+//
+//
+.page--home {
+
+  // we need to expand all of slick
+  slick,
+  .slick-list,
+  .slick-track,
+  .slick-asset {
+    @include position(absolute, 0);
+  }
+
+  .slick-asset {
+      background-size: cover;
+  }
+
+  .content-block {
+    @include position(absolute, null 0 0 null);
+    padding: 30px;
+    max-width: 400px;
+    color: #fff;
+    background-color: rgba(#3498db, .75);
+  }
+}
