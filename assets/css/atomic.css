@@ -1,0 +1,119 @@
+.site-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 9999; }
+  .site-header a {
+    color: #fff;
+    text-decoration: none; }
+  .site-header .nav-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px; }
+    .site-header .nav-block .brand {
+      display: block;
+      height: 100%;
+      background-color: rgba(204, 149, 69, 0.85); }
+    .site-header .nav-block .display {
+      margin: 0;
+      padding: 1em;
+      text-align: center;
+      font-weight: lighter; }
+  .site-header .nav-block--top {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    background-color: rgba(51, 134, 194, 0.85); }
+    .site-header .nav-block--top .nav-list {
+      padding-left: 30px;
+      padding-right: 30px; }
+    .site-header .nav-block--top .nav-item {
+      margin-left: 15px;
+      margin-right: 15px;
+      display: inline-block; }
+  .site-header .nav-block--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: table;
+    width: 250px;
+    padding: 15px;
+    text-align: right;
+    background-color: rgba(242, 96, 62, 0.85); }
+    .site-header .nav-block--right .nav-list {
+      display: table-cell;
+      vertical-align: middle; }
+    .site-header .nav-block--right .nav-item {
+      line-height: 1.5; }
+  .site-header .nav-list {
+    list-style-type: none; }
+
+.page--home .background-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+.page--home slick,
+.page--home .slick-list,
+.page--home .slick-track,
+.page--home .slick-asset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.page--home .slick-dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 6000;
+  width: 600px;
+  padding: 10px 10px 75px 10px;
+  margin: 0;
+  list-style-type: none;
+  background-color: rgba(15, 195, 211, 0.85); }
+  .page--home .slick-dots li {
+    display: block;
+    float: left;
+    margin: 5px; }
+  .page--home .slick-dots button {
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    background-color: rgba(51, 134, 194, 0.85); }
+
+.page--home .slick-dots-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 6000;
+  width: 600px;
+  height: 75px;
+  color: #fff; }
+
+.page--home .slick-asset {
+  background-size: cover; }
+
+.page--home .content-block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  max-height: 40%;
+  width: 600px;
+  max-width: 600px;
+  color: #fff;
+  background-color: rgba(15, 195, 211, 0.85);
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+/*# sourceMappingURL=atomic.css.map */

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Academic
+carousel_config:
+  speed: 1000
+images:
+  - image_url_path: /portfolio/academic/academic_01.jpg
+    image_name: Intra Space Design Academic
+  - image_url_path: /portfolio/academic/academic_02.jpg
+    image_name: Intra Space Design Academic
+  - image_url_path: /portfolio/academic/academic_03.jpg
+    image_name: Intra Space Design Academic
+  - image_url_path: /portfolio/academic/academic_04.jpg
+    image_name: Intra Space Design Academic
+---
+<section class="page--home">
+  <slick class="ng-cloak"
+    data-arrows="false"
+    data-css-ease="linear"
+    data-fade="true"
+    data-speed="{{ page.carousel_config.speed }}"
+    data-dots="true">
+    {% for image in page.images %}
+      <div class="slick-asset" style="background-image:url({{ image.image_url_path | prepend: site.baseurl }})"></div>
+    {% endfor %}
+  </slick>
+
+  <div class="slick-dots-title editable"><h2>Academic</h2></div>
+</section>
+
+<div hidden role="seo">
+  {% for image in page.images %}
+    <img hidden src="{{ image.image_url_path | prepend: site.baseurl }}" alt="{{ image.image_name }}" />
+  {% endfor %}
+</div>

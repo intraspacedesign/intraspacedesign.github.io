@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include _sections/head.html %}
+</head>
+
+<body>
+  {% include _sections/top.html %}
+  {% include organisms/header/header.html %}
+
+  <main class="page">
+    {{ content }}
+  </main>
+
+  {% include organisms/footer/footer.html %}
+  {% include _sections/bottom.html %}
+</body>
+
+</html>

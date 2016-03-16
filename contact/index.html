@@ -1,0 +1,33 @@
+---
+layout: default
+title: Contact
+carousel_config:
+  autoplay_speed: 3000
+  speed: 3000
+images:
+  - image_url_path: /assets/img/sketch_06.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_01.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_02.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_03.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_04.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_05.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_07.jpg
+    image_name: Intra Space Design Sketch
+  - image_url_path: /assets/img/sketch_08.jpg
+    image_name: Intra Space Design Sketch
+---
+<section class="page--home">
+  <slick class="ng-cloak" data-autoplay="true" data-autoplay-speed="{{ page.carousel_config.autoplay_speed }}" data-arrows="false" data-css-ease="linear" data-fade="true" data-infinite="true" data-pause-on-hover="false" data-speed="{{ page.carousel_config.speed }}">
+    {% for image in page.images %}
+      <div class="slick-asset" style="background-image:url({{ image.image_url_path | prepend: site.baseurl }})"></div>
+    {% endfor %}
+  </slick>
+
+  <div class="content-block editable"><h2>Contact</h2><p>Yvonne Bodell MM,NCIDQ</p><p><strong>Telephone</strong><br />616.550.4245</p><p><strong>Email</strong><br /><a style="color: #fff" href="javascript:void(location.href='mailto:'+String.fromCharCode(121,98,111,100,101,108,108,64,105,110,116,114,97,115,112,97,99,101,100,101,115,105,103,110,46,110,101,116))">ybodell@intraspacedesign.net</a></p></div>
+</section>

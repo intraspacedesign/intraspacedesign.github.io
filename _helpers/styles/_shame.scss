@@ -1,0 +1,8 @@
+// http://docs.cloudcannon.com/editing/editor-links/
+.editor-link {
+  display: none;
+}
+
+.cms-editor-active .editor-link {
+  display: block;
+}

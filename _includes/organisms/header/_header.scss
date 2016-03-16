@@ -1,0 +1,72 @@
+
+.site-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-block {
+    @include position(absolute, 0 null null 0);
+    width: 250px;
+
+    .brand {
+      display: block;
+      height: 100%;
+      background-color: rgba(#cc9545, .85);
+    }
+
+    .display {
+      margin: 0;
+      padding: 1em;
+      text-align: center;
+      font-weight: lighter;
+    }
+  }
+
+  .nav-block--top {
+    @include position(absolute, 0 null null 250px);
+    background-color: rgba(#3386c2, .85);
+
+    .nav-list {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .nav-item {
+      margin-left: 15px;
+      margin-right: 15px;
+      display: inline-block;
+    }
+  }
+
+  .nav-block--right {
+    @include position(absolute, 0 0 null null);
+    display: table;
+
+    width: 250px;
+
+    padding: 15px;
+
+    text-align: right;
+    background-color: rgba(#f2603e, .85);
+
+    .nav-list {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .nav-item {
+      line-height: 1.5;
+    }
+  }
+
+
+  .nav-list {
+    list-style-type: none;
+  }
+}
